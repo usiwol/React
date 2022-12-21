@@ -5,6 +5,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
+  //이것도 컴포넌트
   let post = "역삼 우동 맛집"; //변수 : let, const, var // 자료 잠깐 저장할 땐 변수
   //방법1.
   //let [글제목, b] = useState(["남자코트 추천", "강남 우동맛집", "파이썬독학"]); //state문법
@@ -40,10 +41,19 @@ function App() {
       <div className="black-nav">
         <h4>ReactBlog</h4>
 
-        <button>가나다순정렬</button>
+        <button //글제목 가나다순정렬하기
+          onClick={() => {
+            let copy = [...글제목];
+            copy.sort();
+            글제목변경(copy);
+          }}
+        >
+          가나다순정렬
+        </button>
 
         <button
           onClick={() => {
+            //글제목 변경하기
             // 글제목[0] = 글제목;
             let copy = [...글제목];
             copy[0] = "여자코트 추천";
@@ -86,9 +96,45 @@ function App() {
         <p>2월 17일 발행</p>
       </div>
       {/* <h4>{post}</h4> */}
+
+      <Modal></Modal>
+      <Test></Test>
     </div>
   );
 }
+
+// const Modal = () => {
+//   return <div></div>;
+// };
+
+function Modal() {
+  return (
+    <div className="madal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  );
+}
+
+function Test() {
+  return (
+    <div className="madal">
+      <h4>React</h4>
+      <p>Study hard 😎</p>
+      <p>cheer up!</p>
+    </div>
+  );
+}
+//컴포넌트 만드는법<Modal></Modal>
+//function만들기
+//return()안에 html담기
+//<함수명></함수명>Tmrl
+//어떤걸 컴포넌트로 만들면 좋은가
+//1.반복적인 html축약할때
+//2.큰 페이지들
+//3.자주 변경되는 것들
+//단점 : state가져다쓸 때 문제생김(a함수를 b함수에 가져다 쓸 수 없음)
 
 export default App;
 
