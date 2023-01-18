@@ -1,0 +1,56 @@
+.rowFlexBoxBookingRoom {
+  margin: 0 auto;
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.bookingRoomsBox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.peopleInfoBooking {
+  margin: 0 auto;
+  width: 90%;
+  height: 220px;
+}
+.peopleInfoBox {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+}
+.bookingLabel {
+  font-size: 20px;
+  display: inline-block;
+  width: 25%;
+}
+.bookingInput {
+  padding-left: 3%;
+  width: 65%;
+  float: right;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.peopleInfoBox input:focus,
+.bookingTextArea:focus {
+  outline: none;
+}
+.bookingTextArea {
+  padding-top: 2%;
+  height: 70px;
+  resize: none;
+  font-size: 15px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: lightgray;
+}
+.bookingAgreeBox {
+  margin: 0 auto;
+  width: 80%;
+}
